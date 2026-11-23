@@ -1,0 +1,38 @@
+name: StaffMode
+version: 1.0.0
+main: com.maghrebsmp.staffmode.StaffModePlugin
+api-version: '1.21'
+description: Staff Mode with vanish, freeze and invsee for Maghreb SMP.
+author: MaghrebSMP Developer
+
+commands:
+  staff:
+    description: Toggle Staff Mode (or reload the configuration).
+    usage: /<command> [reload]
+  vanish:
+    description: Toggle invisibility from normal players.
+    usage: /<command>
+    aliases: [v]
+  freeze:
+    description: Freeze or unfreeze a player.
+    usage: /<command> <player>
+  invsee:
+    description: Inspect a player's inventory.
+    usage: /<command> <player>
+
+permissions:
+  staffmode.use:
+    description: Access Staff Mode.
+    default: op
+  staffmode.vanish:
+    description: Use vanish and see vanished staff.
+    default: op
+  staffmode.freeze:
+    description: Freeze and unfreeze players.
+    default: op
+  staffmode.invsee:
+    description: Inspect player inventories.
+    default: op
+  staffmode.admin:
+    description: Reload the plugin configuration.
+    default: op

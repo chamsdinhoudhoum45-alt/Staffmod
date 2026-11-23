@@ -1,0 +1,88 @@
+# ---------------------------------------------------------------
+#  StaffMode configuration  (all messages use MiniMessage format)
+#  Reload with /staff reload
+# ---------------------------------------------------------------
+
+staff:
+  # Game mode used while in Staff Mode (SURVIVAL, CREATIVE, ADVENTURE, SPECTATOR)
+  gamemode: SURVIVAL
+  # Staff can fly while in Staff Mode
+  allow-flight: true
+  # Enable vanish automatically when entering Staff Mode
+  auto-vanish: true
+  # Block staff from placing/breaking blocks while in Staff Mode
+  block-building: true
+  # Block staff from hitting other entities while in Staff Mode
+  prevent-attacks: true
+  # Lock the staff inventory (tools cannot be moved or dropped)
+  lock-inventory: true
+  # Hide join/quit messages of vanished players
+  silent-join-quit-when-vanished: true
+
+freeze:
+  # Seconds between "you are frozen" reminders (0 = disabled)
+  reminder-seconds: 5
+  # Commands a frozen player may still use (without the slash)
+  allowed-commands:
+    - msg
+    - r
+    - reply
+    - tell
+
+invsee:
+  # Allow staff to edit the inspected inventory (false = view only)
+  allow-edit: false
+
+# Staff tools. slot is 0-8 (hotbar).
+items:
+  random-teleport:
+    material: ENDER_EYE
+    slot: 0
+    name: "<light_purple><bold>Random Teleport"
+    lore:
+      - "<gray>Right-click to teleport to a random player."
+  inspect:
+    material: BOOK
+    slot: 2
+    name: "<aqua><bold>Inspect Inventory"
+    lore:
+      - "<gray>Right-click a player to see their inventory."
+  freeze:
+    material: PACKED_ICE
+    slot: 4
+    name: "<blue><bold>Freeze"
+    lore:
+      - "<gray>Right-click a player to freeze/unfreeze."
+  vanish:
+    material: LIME_DYE
+    slot: 8
+    name: "<green><bold>Toggle Vanish"
+    lore:
+      - "<gray>Right-click to toggle vanish."
+
+messages:
+  prefix: "<dark_gray>[<gold>Staff</gold>]</dark_gray> "
+  no-permission: "<red>You do not have permission to do that."
+  players-only: "<red>This command can only be used by players."
+  player-not-found: "<red>Player not found."
+  usage-freeze: "<red>Usage: /freeze <player>"
+  usage-invsee: "<red>Usage: /invsee <player>"
+  config-reloaded: "<green>Configuration reloaded."
+  staff-enabled: "<green>Staff Mode <bold>enabled</bold>. Your inventory has been saved."
+  staff-disabled: "<yellow>Staff Mode <bold>disabled</bold>. Your inventory has been restored."
+  staff-save-failed: "<red>Could not save your inventory safely. Staff Mode was NOT enabled."
+  inventory-recovered: "<yellow>Your inventory was recovered after an unexpected disconnect."
+  vanish-enabled: "<green>You are now <bold>vanished</bold>."
+  vanish-disabled: "<yellow>You are now <bold>visible</bold>."
+  frozen-staff: "<aqua>You froze <white><player></white>."
+  unfrozen-staff: "<aqua>You unfroze <white><player></white>."
+  frozen-target: "<red><bold>You have been frozen by staff.</bold> Do not log out."
+  unfrozen-target: "<green>You have been unfrozen."
+  frozen-reminder: "<red>You are frozen. Follow staff instructions."
+  frozen-command-blocked: "<red>You cannot use commands while frozen."
+  frozen-quit: "<red><player> logged out while frozen!"
+  cannot-target-self: "<red>You cannot target yourself."
+  invsee-opened: "<aqua>Inspecting <white><player></white>'s inventory."
+  random-teleport: "<light_purple>Teleported to <white><player></white>."
+  no-players-to-teleport: "<red>There are no players to teleport to."
+  tool-locked: "<red>You cannot do that in Staff Mode."
